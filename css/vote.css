@@ -1,0 +1,142 @@
+html {
+	background-image: linear-gradient(200deg, #e3c5eb, #a9c1ed);
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+table {
+	width: 800px;
+	background-color: #fff;
+	padding: 0;
+	border-radius: 20px;
+}
+
+table tr {
+	height: 50px;
+}
+
+table tr td {
+	padding-left: 40px;
+}
+
+h1 {
+	font-size: 19px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.new_button {
+	width: 90px;
+	background-color: #53a4f4;
+	color: #fff;
+	border-radius: 20px;
+	line-height: 40px;
+	margin: 20px 30px 30px 30px;
+	border: none;
+}
+
+.unselectable {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+ul li {
+	position: absolute;
+	border: 1px solid #fff;
+	background-color: #fff;
+	width: 30px;
+	height: 30px;
+	list-style: none;
+	opacity: 0;
+}
+
+.square li {
+	top: 40vh;
+	left: 70vw;
+	animation: square 10s linear infinite;
+}
+
+.square li:nth-child(2) {
+	top: 80vh;
+	left: 10vw;
+	animation-delay: 2s;
+}
+
+.square li:nth-child(3) {
+	top: 80vh;
+	left: 85vw;
+	animation-delay: 4s;
+}
+
+.square li:nth-child(4) {
+	top: 10vh;
+	left: 70vw;
+	animation-delay: 6s;
+}
+
+.square li:nth-child(5) {
+	top: 10vh;
+	left: 10vw;
+	animation-delay: 8s;
+}
+
+.circle li {
+	bottom: 0;
+	left: 15vw;
+	animation: circle 10s linear infinite;
+}
+
+.circle li:nth-child(2) {
+	left: 35vw;
+	animation-delay: 2s;
+}
+
+.circle li:nth-child(3) {
+	left: 55vw;
+	animation-delay: 4s;
+}
+
+.circle li:nth-child(4) {
+	left: 75vw;
+	animation-delay: 6s;
+}
+
+.circle li:nth-child(5) {
+	left: 90vw;
+	animation-delay: 8s;
+}
+
+@keyframes square {
+	0% {
+		transform: scale(0) rotateY(0deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(5) rotateY(1000deg);
+		opacity: 0;
+	}
+}
+
+@keyframes circle {
+	0% {
+		transform: scale(0) rotateY(0deg);
+		opacity: 1;
+		bottom: 0;
+		border-radius: 0;
+	}
+
+	100% {
+		transform: scale(5) rotateY(1000deg);
+		opacity: 0;
+		bottom: 90vh;
+		border-radius: 50%;
+	}
+}
